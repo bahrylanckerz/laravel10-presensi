@@ -44,6 +44,9 @@
                 <h4>Fill the form to get started</h4>
             </div>
             <div class="section mt-1 mb-5">
+                @if (Session::get('error'))
+                    <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                @endif
                 <form action="{{ route('login.process') }}" method="post">
                     @csrf
                     <div class="form-group boxed">

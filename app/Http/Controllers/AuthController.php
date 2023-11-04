@@ -17,7 +17,15 @@ class AuthController extends Controller
         if (Auth::guard('employee')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect('dashboard');
         } else {
-            echo "Gagal";
+            return redirect('/')->with('error', 'Email atau Password Salah');
+        }
+    }
+
+    public function logout()
+    {
+        if (Auth::guard('employee')->check()) {
+            Auth::guard('employee')->logout();
+            return redirect('/');
         }
     }
 }

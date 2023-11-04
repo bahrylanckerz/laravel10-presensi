@@ -23,6 +23,10 @@
   </div>
   <!-- * loader -->
 
+	<!-- App Header -->
+	@yield('topbar')
+	<!-- * App Header -->
+
   <!-- App Capsule -->
   <div id="appCapsule">
 		@yield('content')
@@ -35,6 +39,8 @@
 
   <!-- ///////////// Js Files ////////////////////  -->
 	@include('layouts.footer')
+
+	@yield('script')
 </body>
 
 </html>

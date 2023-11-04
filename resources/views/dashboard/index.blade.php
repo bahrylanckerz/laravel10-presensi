@@ -48,11 +48,11 @@
             </div>
             <div class="item-menu text-center">
               <div class="menu-icon">
-                <a href="" class="danger" style="font-size: 30px">
-                  <i class="fas fa-map-marker-alt"></i>
+                <a href="{{ route('logout') }}" class="danger" style="font-size: 30px">
+                  <i class="fas fa-power-off"></i>
                 </a>
               </div>
-              <div class="menu-name">Lokasi</div>
+              <div class="menu-name">Keluar</div>
             </div>
           </div>
         </div>
